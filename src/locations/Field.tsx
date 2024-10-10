@@ -3,7 +3,6 @@ import { useSDK } from "@contentful/react-apps-toolkit";
 import { Entry, FieldAppSDK } from "@contentful/app-sdk";
 import {
   Form,
-  Heading,
   TextInput,
   Paragraph,
   Spinner,
@@ -13,7 +12,6 @@ import {
   Box,
 } from "@contentful/f36-components";
 import SortableTree, {
-  TreeItem,
   NodeData,
 } from "@nosferatu500/react-sortable-tree";
 import "@nosferatu500/react-sortable-tree/style.css";
