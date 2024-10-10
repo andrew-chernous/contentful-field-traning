@@ -217,7 +217,6 @@ const Field = () => {
   return (
     <Box className="category-selection">
       <Form>
-        <Heading>Search needed categories</Heading>
         <TextInput
           placeholder="Search categories..."
           value={searchTerm}
