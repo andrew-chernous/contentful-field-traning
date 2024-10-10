@@ -127,7 +127,6 @@ const Field = () => {
     };
   }, [sdk]);
 
-  // Handle checkbox changes
   const handleCheck = (id: string) => {
     setCheckedCategories((prevChecked) => {
       let newChecked: string[];
@@ -146,7 +145,6 @@ const Field = () => {
       }));
 
       sdk.field.setValue(newValue);
-      console.log(newValue);
 
       return newChecked;
     });
@@ -219,7 +217,7 @@ const Field = () => {
   return (
     <Box className="category-selection">
       <Form>
-        <Heading>Category Selection</Heading>
+        <Heading>Search needed categories</Heading>
         <TextInput
           placeholder="Search categories..."
           value={searchTerm}

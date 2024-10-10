@@ -11,13 +11,11 @@ const Sidebar = () => {
     const sdk = useSDK<SidebarAppSDK>();
     const contentField = sdk.entry.fields[CONTENT_FIELD_ID];
 
-    // Get the initial plain text from the rich text document
     const [blogText, setBlogText] = useState(documentToPlainTextString(contentField.getValue() || {}));
     const stats = readingTime(blogText || '');
 
     useEffect(() => {
         const detach = contentField.onValueChanged((value) => {
-            // Convert the rich text document to plain text
             setBlogText(documentToPlainTextString(value || {}));
         });
         return () => detach();
